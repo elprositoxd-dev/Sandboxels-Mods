@@ -3578,3 +3578,15 @@ elements.silica_gel = {
         clay: {elem2: "clay_soil"}
     }
 }
+if (!eLists.UNMOVABLE){eLists.UNMOVABLE = [];}
+eLists.UNMOVABLE.push("false_vacuum", "anchor")
+runAfterLoad(() => {
+    for (_element in eLists.UNMOVABLE){
+        eLists.UNMOVABLE[_element] = elements[eLists.UNMOVABLE[_element]].id
+    }
+})
+validateMoves((pixel, nx, ny) => {
+    if (eLists.UNMOVABLE.includes(elements[pixel.element].id)){
+        return false;
+    }
+})
