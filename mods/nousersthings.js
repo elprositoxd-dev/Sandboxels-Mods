@@ -3642,15 +3642,10 @@ elements.instant_wire = {
     },
     renderer: function(pixel, ctx){
         let rgb = getPixelColor(pixel.color);
-        pixel.rgb = rgb
         let hsv = RGBtoHSV(rgb[0], rgb[1], rgb[2])
-        pixel.hsv = hsv
         if (!pixel.iCharge){hsv.v = hsv.v*0.3}
-        pixel.hsv2 = hsv
         let rgb2 = HSVtoRGB(hsv.h, hsv.s, hsv.v)
-        pixel.rgb2 = rgb2
         let hex = RGBToHex(rgb2)
-        pixel.hex = hex
         drawSquare(ctx, hex, pixel.x, pixel.y)
     },
     updateOrder: 203847
