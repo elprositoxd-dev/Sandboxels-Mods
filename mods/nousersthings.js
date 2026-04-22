@@ -3644,12 +3644,12 @@ elements.instant_wire = {
         }
     },
     renderer: function(pixel, ctx){
-        let rgb = getPixelColor(pixel.color);
-        let hsv = RGBtoHSV(parseInt(rgb[0]), parseInt(rgb[1]), parseInt(rgb[2]))
-        if (!pixel.iCharge){hsv.v = hsv.v*0.3}
-        let rgb2 = HSVtoRGB(hsv.h, hsv.s, hsv.v)
-        let hex = RGBToHex(rgb2)
-        drawSquare(ctx, hex, pixel.x, pixel.y)
+        let _rgb = getPixelColor(pixel.color);
+        let _hsv = RGBtoHSV(parseInt(_rgb[0]), parseInt(_rgb[1]), parseInt(_rgb[2]))
+        if (!pixel.iCharge){_hsv.v = _hsv.v*0.3}
+        let _rgb2 = HSVtoRGB(_hsv.h, _hsv.s, _hsv.v)
+        let _hex = RGBToHex(_rgb2)
+        drawSquare(ctx, _hex, pixel.x, pixel.y)
     },
     updateOrder: 203847
 }
