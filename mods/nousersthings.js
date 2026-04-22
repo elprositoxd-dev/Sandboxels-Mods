@@ -3642,7 +3642,7 @@ elements.instant_wire = {
     },
     renderer: function(pixel, ctx){
         let rgb = getPixelColor(pixel.color);
-        let hsv = RGBtoHSV(rgb[0], rgb[1], rgb[2])
+        let hsv = RGBtoHSV(parseInt(rgb[0]), parseInt(rgb[1]), parseInt(rgb[2]))
         if (!pixel.iCharge){hsv.v = hsv.v*0.3}
         let rgb2 = HSVtoRGB(hsv.h, hsv.s, hsv.v)
         let hex = RGBToHex(rgb2)
