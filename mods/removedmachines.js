@@ -5,7 +5,7 @@ elements.shocker = {
     temp: 20,
     behaviorOn: [
         "XX|CR:electric|XX",
-        "CR:electric|XX|HR:electric",
+        "CR:electric|XX|CR:electric",
         "XX|CR:electric|XX",
     ],
     category: "machines",
@@ -21,7 +21,7 @@ elements.tesla_coil = {
     temp: 7025,
     behaviorOn: [
         "XX|CR:plasma|XX",
-        "CR:plasma|XX|HR:plasma",
+        "CR:plasma|XX|CR:plasma",
         "XX|CR:plasma|XX",
     ],
     category: "machines",
