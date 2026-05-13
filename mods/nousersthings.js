@@ -3737,7 +3737,7 @@ elements.ilamp = {
     properties: {lastUpdate: 0, cooldown: 0},
     grain: 0,
     tick: function(pixel){
-        iCooldownTick(pixel, 0)
+        iCooldownTick(pixel, -2)
     },
     iCharge: function(pixel, otherPixel){
         iChargeCooldown(pixel, 10)
