@@ -3732,6 +3732,7 @@ elements.ilamp = {
     color: "#ff0000",
     iConduct: 1,
     name: "i-Lamp",
+    category: "instant machines",
     behavior: behaviors.WALL,
     properties: {lastUpdate: 0, cooldown: 0},
     grain: 0,
