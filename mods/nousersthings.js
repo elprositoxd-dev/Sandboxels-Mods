@@ -280,7 +280,7 @@ elements.technetium = {
             var x = pixel.x+coord[0];
             var y = pixel.y+coord[1];
             if (isEmpty(x, y)){
-                createPixel("positron", x, y)
+                createPixel("electric", x, y)
                 break;
             }
         }
@@ -305,7 +305,7 @@ elements.technetium = {
             var x = pixel.x+coord[0];
             var y = pixel.y+coord[1];
             if (isEmpty(x, y)){
-                createPixel("positron", x, y)
+                createPixel("electric", x, y)
                 break;
             }
         }
@@ -2411,7 +2411,7 @@ elements.specific_ray_emitter = {
     iUpdate: function(pixel, spreader){
         let special = Object.keys(raySpecialFunctions).includes(pixel.emit)
         let i = [spreader.x-pixel.x, spreader.y-pixel.y]
-        if (pixel.angle !== null){i = [Math.cos(pixel.angle), -Math.sin(pixel.angle)]}
+        if (pixel.angle !== null){i = [Math.cos(pixel.angle+Math.PI), -Math.sin(pixel.angle+Math.PI)]}
         let quota = 0
         let jcoords = lineCoords(
             Math.round(pixel.x-i[0]*pixel.rayStart),
