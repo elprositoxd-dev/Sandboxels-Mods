@@ -2309,7 +2309,7 @@ elements.specific_ray_emitter = {
         ans4 = parseInt(ans4)
         let ans5 = await _nousersthingslistprompt("Angle?", ["Default behavior", "Custom number"])
         if (ans5 == "Custom number"){
-            ans5 = parseFloat(await _nousersthingsprompt("What should the angle be?", 0))*(Math.PI/180)+Math.PI
+            ans5 = parseFloat(await _nousersthingsprompt("What should the angle be?", 0))*(Math.PI/180)
         } else ans5 = null
         let ans6 = await _nousersthingslistprompt("Would you like the beam to terminate upon hitting a specific element?", ["Yes", "No"])
         if (ans6 == "Yes"){
@@ -2411,7 +2411,7 @@ elements.specific_ray_emitter = {
     iUpdate: function(pixel, spreader){
         let special = Object.keys(raySpecialFunctions).includes(pixel.emit)
         let i = [spreader.x-pixel.x, spreader.y-pixel.y]
-        if (pixel.angle !== null){i = [Math.cos(pixel.angle), -Math.sin(pixel.angle)]}
+        if (pixel.angle !== null){i = [Math.cos(pixel.angle+Math.PI), -Math.sin(pixel.angle+Math.PI)]}
         let quota = 0
         let jcoords = lineCoords(
             Math.round(pixel.x-i[0]*pixel.rayStart),
