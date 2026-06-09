@@ -75,6 +75,12 @@
 			margin-bottom: 10px;
 		}
 	</style>
+
+	<script data-cfasync="false">
+      window.ramp = window.ramp || {};
+      window.ramp.que = window.ramp.que || [];
+      window.ramp.passiveMode = true;
+    </script>
 </head>
 
 <body>
@@ -539,11 +545,28 @@
 </div>
 
 
+<footer></footer>
 
 
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8485284630785740"
-		crossorigin="anonymous"></script>
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8485284630785740"
+		crossorigin="anonymous"></script> -->
+
+<script>
+	if (location.hostname === "mods.r74n.com") {
+		let script = document.createElement("script");
+		script.setAttribute("data-cfasync","false");
+		script.setAttribute("async",true);
+		script.setAttribute("src","//cdn.intergient.com/1025803/77544/ramp.js");
+		// script.setAttribute("crossorigin","anonymous");
+		document.head.appendChild(script);
+	
+		window.ramp.que.push(()=>{
+			ramp.spaNewPage("mod-list");
+			document.querySelector("footer").style.paddingBottom = "8em";
+		})
+	}
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93720349-9"></script>
