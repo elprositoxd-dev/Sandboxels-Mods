@@ -280,7 +280,7 @@ elements.technetium = {
             var x = pixel.x+coord[0];
             var y = pixel.y+coord[1];
             if (isEmpty(x, y)){
-                createPixel("positron", x, y)
+                createPixel("electric", x, y)
                 break;
             }
         }
@@ -305,7 +305,7 @@ elements.technetium = {
             var x = pixel.x+coord[0];
             var y = pixel.y+coord[1];
             if (isEmpty(x, y)){
-                createPixel("positron", x, y)
+                createPixel("electric", x, y)
                 break;
             }
         }
